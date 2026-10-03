@@ -1,0 +1,23 @@
+{
+  "skill_name": "server-resource-auditor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run a full daily server audit. I need to see active users, their resource usage, whether I should be courteous, and any stale files or Docker images to clean up.",
+      "expected_output": "A Markdown report showing: (1) active users and their CPU/memory usage, (2) courtesy status (is Bryan, Peter, or Kirk active?), (3) resource cap reminder (60% max), (4) list of stale files with ages and sizes, (5) unused Docker images with owner and creation date.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Run a quick hourly check to see who's currently on the server and what resources they're using. Keep it brief.",
+      "expected_output": "A short report showing: (1) active users, (2) their CPU threads, memory, and CPU usage, (3) overall server status (CPU, memory, disk %), (4) resource cap reminder. No stale files or Docker info.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a cleanup report focused on stale files and unused Docker images. What should be deleted?",
+      "expected_output": "A Markdown report with two sections: (1) Stale Files (files older than 30 days, with size and age), (2) Docker Images (unused 12+ months, with owner and creation date). Include recommendations (DELETE, REVIEW, etc.).",
+      "files": []
+    }
+  ]
+}
